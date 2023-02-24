@@ -2,6 +2,8 @@ import 'package:apphumanlive/models/productos_model.dart';
 import 'package:flutter/material.dart';
 import 'package:quickalert/quickalert.dart';
 
+import 'formas_pago.dart';
+
 class Cart extends StatefulWidget {
   List<ProductosModel> _cart = [];
 
@@ -31,7 +33,7 @@ class _CartState extends State<Cart> {
         children: <Widget>[
           Text(
             'Total: \$${valorTotal(_cart)}',
-            style: new TextStyle(
+            style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 14.0,
                 color: Colors.black),
@@ -53,16 +55,16 @@ class _CartState extends State<Cart> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[
+        actions: const <Widget>[
           IconButton(
             icon: Icon(Icons.menu),
             onPressed: null,
             color: Colors.white,
           )
         ],
-        title: Text(
+        title: const Text(
           'Detalle',
-          style: new TextStyle(
+          style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.black),
         ),
         centerTitle: true,
@@ -108,7 +110,7 @@ class _CartState extends State<Cart> {
                             Row(
                               children: <Widget>[
                                 Expanded(
-                                    child: Container(
+                                    child: SizedBox(
                                         width: 100,
                                         height: 100,
                                         child: Image.asset(
@@ -132,23 +134,23 @@ class _CartState extends State<Cart> {
                                           height: 40,
                                           decoration: BoxDecoration(
                                               color: Colors.blue[900],
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 6.0,
                                                   color: Colors.blue,
                                                   offset: Offset(0.0, 1.0),
                                                 )
                                               ],
-                                              borderRadius: BorderRadius.all(
+                                              borderRadius: const BorderRadius.all(
                                                 Radius.circular(50.0),
                                               )),
                                           margin: EdgeInsets.only(top: 20.0),
                                           padding: EdgeInsets.all(2.0),
-                                          child: new Row(
+                                          child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: <Widget>[
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 8.0,
                                               ),
                                               IconButton(
@@ -161,20 +163,20 @@ class _CartState extends State<Cart> {
                                               ),
                                               Text(
                                                 '${_cart[index].quantity}',
-                                                style: new TextStyle(
+                                                style: const TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 22.0,
                                                     color: Colors.white),
                                               ),
                                               IconButton(
-                                                icon: Icon(Icons.add),
+                                                icon: const Icon(Icons.add),
                                                 onPressed: () {
                                                   _addProduct(index);
                                                   valorTotal(_cart);
                                                 },
                                                 color: Colors.yellow,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 8.0,
                                               )
                                             ],
@@ -184,7 +186,7 @@ class _CartState extends State<Cart> {
                                     )
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 38.0,
                                 ),
                                 Text('ud: \$${item.price.toString()}',
@@ -198,28 +200,32 @@ class _CartState extends State<Cart> {
                             )
                           ],
                         )),
-                    Divider(
+                    const Divider(
                       color: Color.fromARGB(255, 0, 12, 173),
                     )
                   ],
                 );
               },
             ),
-            SizedBox(
+            const SizedBox(
               width: 10.0,
             ),
             pagoTotal(_cart),
-            SizedBox(
+            const SizedBox(
               width: 20.0,
             ),
             Container(
-          child: Column(children: <Widget>[
+              
+          child: 
             ElevatedButton(onPressed: (){
-              showAlert();
-            }, child: Text("Proceder al Pago"),
+               Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                (const Formas_pago())));
+            }, child: const Text("Proceder al Pago"),
             
-            )
-          ]),
+            ),
+         
               
               
             )
@@ -255,4 +261,7 @@ class _CartState extends State<Cart> {
      
           
   }
+  
+
+  
 }

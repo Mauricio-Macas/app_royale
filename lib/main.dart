@@ -1,5 +1,5 @@
 import 'package:apphumanlive/models/productos_model.dart';
-import 'package:apphumanlive/pages/otra_pagina.dart';
+import 'package:apphumanlive/pages/formas_pago.dart';
 import 'package:apphumanlive/pages/pedido_lista.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (OtraPagina())))),
+                                (Formas_pago())))),
                 new Divider(),
 
                 new ListTile(
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (OtraPagina())))),
+                                (Formas_pago())))),
                 new Divider(),
 
                 new ListTile(
@@ -154,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (OtraPagina())))),
+                                (Formas_pago())))),
 
                 new Divider(),
 
@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (OtraPagina())))),
+                                (Formas_pago())))),
               ],
             ),
           ),
