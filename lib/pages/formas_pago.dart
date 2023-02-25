@@ -1,3 +1,5 @@
+import 'package:apphumanlive/pages/credito_directo.dart';
+import 'package:apphumanlive/pages/tarjeta_credito.dart';
 import 'package:flutter/material.dart';
 
 import 'cheque_directo.dart';
@@ -111,7 +113,7 @@ class _Formas_pagoState extends State<Formas_pago> {
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (const Cheque_directo())));
+                                (const Credito_directo())));
                       },
                       child: Text(
                       'Crédito Directo',
@@ -133,7 +135,7 @@ class _Formas_pagoState extends State<Formas_pago> {
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (const Cheque_directo())));
+                                (const Tarjeta_credito())));
                       },
                       //child: const Text("Tarjeta de Crédito"),
                       child: Text(
@@ -147,6 +149,8 @@ class _Formas_pagoState extends State<Formas_pago> {
                     ),
                   ),
                 ),
+
+                
           ],
         ));
   }
