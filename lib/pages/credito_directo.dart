@@ -1,3 +1,4 @@
+import 'package:apphumanlive/pages/contrato_tasaAnual.dart';
 import 'package:apphumanlive/pages/tarjeta_credito.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class _Credito_directoState extends State<Credito_directo> {
                     borderRadius: BorderRadius.circular(10),
             child: Container(
               alignment: Alignment.centerRight,
-              padding: EdgeInsets.only(left: 120),
+              padding: EdgeInsets.only(left: 90),
               height: 70,
               width: 400,
               color: Color.fromARGB(255, 177, 177, 177),
@@ -206,7 +207,7 @@ class _Credito_directoState extends State<Credito_directo> {
                     borderRadius: BorderRadius.circular(10),
             child: Container(
               alignment: Alignment.centerRight,
-              padding: EdgeInsets.only(left: 20),
+              //padding: EdgeInsets.only(left: 0),
               height: 70,
               width: 400,
               color: Color.fromARGB(255, 177, 177, 177),
@@ -323,7 +324,7 @@ class _Credito_directoState extends State<Credito_directo> {
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) =>
-                        (const Tarjeta_credito())));
+                        (TasaAnual())));
               },
               child: const Text("Proceder al Pago"),
             ),

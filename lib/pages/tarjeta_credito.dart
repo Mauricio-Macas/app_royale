@@ -1,3 +1,4 @@
+import 'package:apphumanlive/pages/detalle_tarjeta.dart';
 import 'package:flutter/material.dart';
 
 class Tarjeta_credito extends StatefulWidget {
@@ -264,7 +265,7 @@ Container(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) =>
-                        (const Tarjeta_credito())));
+                        (const detalle_tc())));
               },
               child: const Text("Proceder al Pago"),
             ),
