@@ -1,5 +1,8 @@
 import 'package:apphumanlive/models/productos_model.dart';
+import 'package:apphumanlive/pages/HistVenta.dart';
 import 'package:apphumanlive/pages/formas_pago.dart';
+import 'package:apphumanlive/pages/login.dart';
+import 'package:apphumanlive/pages/name_venta.dart';
 import 'package:apphumanlive/pages/pedido_lista.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -111,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 //new Divider(),
                 new ListTile(
                     title: new Text(
-                      'Home',
+                      'Home Login',
                       style: TextStyle(color: Colors.black),
                     ),
                     trailing: new Icon(
@@ -122,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (Formas_pago())))),
+                                (LoginPage())))),
                 new Divider(),
 
                 new ListTile(
@@ -143,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 new ListTile(
                     title: new Text(
-                      'Productos',
+                      'HistVentas Contrato',
                       style: TextStyle(color: Colors.black),
                     ),
                     trailing: new Icon(
@@ -154,13 +157,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (Formas_pago())))),
+                                (ContVentas())))),
 
                 new Divider(),
 
                 new ListTile(
                     title: new Text(
-                      'QR Code',
+                      'Nombre ventas',
                       style: TextStyle(color: Colors.black),
                     ),
                     trailing: new FaIcon(
@@ -171,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                (Formas_pago())))),
+                                (Name_Venta())))),
               ],
             ),
           ),
